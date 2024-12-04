@@ -1,0 +1,1228 @@
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+  box-sizing: border-box;
+  }
+    
+    /* Body Styling */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1A3636;
+    color: #D6BD98;
+  }
+    
+    /* Header */
+  header {
+    background: #ffffff;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    border-bottom: 1px solid #000000;
+  }
+    
+  header .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+  }
+    
+  header .nav-links a {
+    text-decoration: none;
+    color: #1A3636;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  /* Modal General Styles */
+/* Modal styles */
+.account-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  display: flex; /* Enable flexbox for centering */
+}
+
+.modal-content {
+  background-color: #ffffff; /* Clean white background */
+  padding: 30px 40px; /* Balanced padding */
+  width: 100%;
+  max-width: 500px; /* Moderate width for standard view */
+  border-radius: 8px; /* Subtle rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Gentle shadow for depth */
+  text-align: center; /* Align text to the left for better readability */
+  font-family: 'Montserrat', sans-serif; /* Professional font */
+  position: relative;
+  overflow: hidden; /* Ensures no overflowing content */
+}
+
+.container{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+span.close {
+  font-size: 1.5rem;
+  color: #1A3636;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.form-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #D6BD98; /* Matching the title color */
+}
+
+.input-group {
+  margin-bottom: 1px;
+}
+
+.input-group input {
+  width: 80%;
+  padding: 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.btn {
+  padding: 12px 15px;
+  background-color: #40534C; /* Dark green for buttons */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #677D6A; /* Lighter green on hover */
+}
+
+.or {
+  margin: 10px;
+  color: #999;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.links {
+  text-align: center;
+  margin: 1px;
+}
+
+.links button {
+  background: none;
+  color: #40534C;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.links button:hover {
+  text-decoration: underline;
+}
+
+
+
+    /* Hero Section */
+    #hero {
+      position: relative;
+      height: 100vh;
+      color: white;
+      overflow: hidden;
+    }
+    
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    
+    .hero-content h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 4rem;
+    }
+    
+    .hero-content p {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+    
+    .hero-content .find-out-more {
+      background-color: #D6BD98;
+      border: none;
+      padding: 10px 20px;
+      color: #1A3636;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    
+    .carousel {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    .carousel-slide {
+      flex-shrink: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      display: none;
+    }
+    
+    .carousel-slide.active {
+      display: block;
+    }
+    
+    .carousel-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    
+    .carousel-controls .prev, .carousel-controls .next {
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 10px;
+      user-select: none;
+    }
+    /* Dropdown container */
+    /* Basic Styles for Navigation */
+    .nav-links {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
+    
+    .nav-links li {
+      position: relative; /* Necessary for positioning dropdowns */
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      padding: 10px 15px;
+      color: #40534C; /* Change to your palette color */
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      display: block;
+    }
+    
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #D6BD98;
+    color: #FFFFFF;
+  }
+
+  /* Show Dropdown on Hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Notification Icon Styling */
+  .notification-icon {
+    position: relative;
+  }
+
+  .notification-icon i {
+    font-size: 1.5rem; /* Size of the notification bell */
+    color: #1A3636;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .notification-icon:hover i {
+    transform: scale(1.1);
+    color: #D6BD98;
+  }
+
+  /* Notification Badge */
+  .notification-badge {
+    position: absolute;
+    top: -5px; /* Adjust position relative to the bell */
+    right: -5px;
+    background-color: #D9534F; /* Red for notifications */
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 3px 6px;
+    line-height: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Dropdown for Notifications */
+  .notification-icon .dropdown-content {
+    right: 0; /* Align dropdown to the right of the icon */
+    left: auto;
+    min-width: 200px; /* Adjust dropdown width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+
+  .notification-icon .dropdown-content a {
+    padding: 10px 20px;
+    color: #1A3636;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: left;
+    transition: background-color 0.3s ease;
+  }
+
+  .notification-icon .dropdown-content a:hover {
+    background-color: #D6BD98;
+    color: white;
+  }
+
+  /* Account Icon */
+  .account-icon {
+    position: relative;
+  }
+
+  .account-icon i {
+    font-size: 1.5rem; /* Size of the notification bell */
+    color: #1A3636;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .account-icon .dropdown-content {
+    right: 0; /* Align dropdown to the right of the icon */
+    left: auto;
+    min-width: 200px; /* Adjust dropdown width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+  .account-icon .dropdown-content a {
+    padding: 10px 20px;
+    color: #1A3636;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: left;
+    transition: background-color 0.3s ease;
+  }
+
+  .account-icon .dropdown-content a :hover {
+    background-color: #D6BD98;
+    color: white;
+  }
+
+    
+    /* Breadcrumb Style */
+    #breadcrumb {
+      background-color: #D6BD98;
+      padding: 10px;
+      font-size: 1.2em;
+      text-align: left;
+    }
+    
+    #breadcrumb a {
+      text-decoration: none;
+      color: #1A3636;
+    }
+    
+    #breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    
+    #our-story {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      background-color: #f5f5f5;
+    }
+    p {
+      margin-bottom: 20px;  /* Adds space between paragraphs */
+      line-height: 1.6;     /* Improves readability by increasing line spacing */
+    }
+    
+    .container {
+      display: flex;
+      width: 100%;
+    }
+    
+    .text-content {
+      flex: 1;
+      padding-right: 20px;
+    }
+    
+    .text-content h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      color: #1A3636;
+      margin-bottom: 15px;
+    }
+    
+    .text-content p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      color: #677D6A;
+      line-height: 1.6;
+    }
+    
+    .image-gallery {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .image-gallery img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    /* Breadcrumb Style */
+    #breadcrumb {
+      background-color: #D6BD98;
+      padding: 10px;
+      font-size: 1.2em;
+      text-align: left;
+    }
+    
+    #breadcrumb a {
+      text-decoration: none;
+      color: #1A3636;
+    }
+    
+    #breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    
+    #our-tailors {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      background-color: #f5f5f5;
+    }
+
+    p {
+      margin-bottom: 20px;  /* Adds space between paragraphs */
+      line-height: 1.6;     /* Improves readability by increasing line spacing */
+    }
+    
+    .info-section .container {
+      display: flex;
+      width: 100%;
+    }
+    
+    .info-section .text-content {
+      flex: 1;
+      padding-right: 20px;
+    }
+    
+    .info-section .text-content h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      color: #1A3636;
+      margin-bottom: 15px;
+    } 
+    
+    .info-section .text-content p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      color: #677D6A;
+      line-height: 1.6;
+    }
+    
+    .info-section .image-gallery {
+      flex: 1 1 45%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .info-section .image-gallery img {
+      width: 30%;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    
+    .info-section .image-gallery img:hover {
+      transform: scale(1.05);
+    }
+    
+    #why-choose-perfectthreads {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      background-color: #f5f5f5;
+    }
+    p {
+      margin-bottom: 20px;  /* Adds space between paragraphs */
+      line-height: 1.6;     /* Improves readability by increasing line spacing */
+    }
+    #why-choose-perfectthreads .container {
+      display: flex;
+      width: 100%;
+    }
+    #why-choose-perfectthreads .text-content {
+      flex: 1;
+      padding-right: 50px;
+    }
+    #why-choose-perfectthreads h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      color: #1A3636;
+      margin-bottom: 15px;
+    }
+    #why-choose-perfectthreads h3 {
+        font-size: 20px;
+        margin-top: 20px;
+        font-weight: bold;
+        color: #40534C;
+    }
+    #why-choose-perfectthreads p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      color: #40534C;
+      line-height: 1.6;
+    }
+    #why-choose-perfectthreads .image-gallery {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    #why-choose-perfectthreads .image-gallery img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    #why-choose-perfectthreads .gallery-image {
+      transform: scale(1.05);
+    }
+    
+  /*ALESHA DITO MO LAGAY ANG FABRICS*/
+
+  /* Scoped styles for styles.html */
+  /* Styles for the styles.html page */
+  /* Styles for styles.html */
+
+
+  .styles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #1A3636; /* Dark green background */
+
+  }
+
+
+
+  .styles .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem; /* Vertical spacing */
+  }
+
+  /* Styles Header */
+  .styles-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #677D6A; /* Bottom border */
+    padding-bottom: 0.4rem;
+  }
+  .styles-header h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: #D6BD98;
+    margin-bottom: 15px;
+  }
+  .styles-header .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #40534C;
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
+    flex: 0 0 200px; 
+  }
+  .styles-header .search-bar input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #D6BD98;
+    padding: 0.3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    flex: 1;
+  }
+  .styles-header .search-bar input::placeholder {
+    color: #D6BD98;
+    opacity: 0.8;
+  }
+  .styles-header .search-bar button {
+    background-color: transparent;
+    border: none;
+    color: #D6BD98;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.2rem;
+  }
+
+  .styles-header .breadcrumbs {
+    color: #D6BD98;
+    font-size: 1rem;
+    flex-shrink: 0; /* Prevents shrinking when resizing */
+  }
+  /* Content Section */
+  .styles-content {
+    display: flex;
+    width: 100%;
+  }
+
+  .styles-content .categories {
+    width: 25%; /* Fixed width */
+    min-height: 300px; /* Ensures minimum height to avoid shifts */
+    overflow-y: auto; /* Ensures consistent scroll behavior */
+    flex: 1;
+  }
+
+  .styles-content .text-content {
+    flex: 1;
+    padding-right: 20px;
+  }
+
+  .styles-content .categories h3 {
+    font-size: 1.0rem;
+    margin-bottom: 1rem;
+  }
+
+  .styles-content .categories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .styles-content .categories ul li {
+    cursor: pointer;
+    padding: 0.3rem 0;
+    color: #D6BD98;
+    transition: color 0.3s;
+  }
+
+  .styles-content .categories ul li:hover {
+    color: #677D6A;
+  }
+
+  .styles-content .gallery {
+    width: 75%; /* Gallery width */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 1rem;
+  }
+
+  .styles-content .gallery img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+
+  .styles-content .gallery img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+  }
+
+  /* Hiding subcategories by default */
+  .styles .subcategories {
+    display: none;
+    list-style: none;
+    padding-left: 1.5rem;
+  }
+
+  .styles .subcategories li {
+    cursor: pointer;
+    padding: 0.3rem 0;
+    color: #D6BD98;
+    transition: color 0.3s;
+  }
+
+  .styles .subcategories li:hover {
+    color: #677D6A;
+  }
+
+  .fabrics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #1A3636; /* Dark green background */
+    color: #D6BD98; /* Light beige text */
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .fabrics .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem; /* Vertical spacing */
+  }
+
+  /* Styles Header */
+  .fabrics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #677D6A; /* Bottom border */
+    padding-bottom: 0.4rem;
+  }
+  .fabrics-header h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: #D6BD98;
+    margin-bottom: 15px;
+  }
+
+
+  .fabrics-header .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #40534C;
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
+    flex: 0 0 200px; 
+  }
+
+  .fabrics-header .search-bar input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #D6BD98;
+    padding: 0.3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    flex: 1;
+  }
+
+  .fabrics-header .search-bar input::placeholder {
+    color: #D6BD98;
+    opacity: 0.8;
+  }
+
+  .fabrics-header .search-bar button {
+    background-color: transparent;
+    border: none;
+    color: #D6BD98;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.2rem;
+  }
+
+  .fabrics-header .breadcrumbs {
+    color: #D6BD98;
+    font-size: 1rem;
+    flex-shrink: 0; /* Prevents shrinking when resizing */
+  }
+
+  .fabrics-content {
+    display: flex;
+    width: 100%;
+  }
+
+  .fabrics-content .categories {
+    width: 25%; /* Fixed width */
+    min-height: 300px; /* Ensures minimum height to avoid shifts */
+    overflow-y: auto; /* Ensures consistent scroll behavior */
+    flex: 1;
+  }
+
+  .fabrics-content .text-content {
+    flex: 1;
+    padding-right: 20px;
+  }
+  .fabrics-content h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: #1A3636;
+    margin-bottom: 15px;
+  }
+  .fabrics-content .categories h3 {
+    font-size: 1.0 rem;
+    margin-bottom: 1rem;
+  }
+
+  .fabrics-content .categories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .fabrics-content .categories ul li {
+    cursor: pointer;
+    padding: 0.3rem 0;
+    color: #D6BD98;
+    transition: color 0.3s;
+  }
+
+  .fabrics-content .categories ul li:hover {
+    color: #677D6A;
+  }
+
+  .fabrics-content .gallery {
+    width: 75%; /* Gallery width */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 1rem;
+  }
+
+  .fabrics-content .gallery img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+
+  .fabrics-content .gallery img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+  }
+
+  /* Hiding subcategories by default */
+  .fabrics .subcategories {
+    display: none;
+    list-style: none;
+    padding-left: 1.5rem;
+  }
+
+  .fabrics .subcategories li {
+    cursor: pointer;
+    padding: 0.3rem 0;
+    color: #D6BD98;
+    transition: color 0.3s;
+  }
+
+  .fabrics.subcategories li:hover {
+    color: #677D6A;
+  }
+
+
+  #contact {
+      padding: 50px 20px;
+      background-color: #f5f5f5;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    #contact h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      color: #1A3636;
+      margin-bottom: 15px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .contact-map {
+      display: flex;
+      justify-content: flex-start; /* Aligns the map to the left */
+      align-items: center; /* Vertically centers the map */
+      margin-bottom: 40px;
+    }
+    
+    .contact-map iframe {
+      width: 100%;
+      max-width: 1000px; /* Maximum width of the iframe */
+      height: 450px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .contact-details {
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    .contact-details h3 {
+      font-size: 18px;
+      color: #1A3636;
+      margin-bottom: 10px;
+    }
+    
+    .contact-details p {
+      color: #40534C;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    
+    .contact-details a {
+      color: #1A3636;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    
+    .contact-form {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .contact-form h3 {
+      font-size: 20px;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #40534C;
+    }
+
+    .contact-form p {
+      font-size: 16px;
+      color: #40534C;
+      margin-bottom: 20px;
+    }
+    
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    
+    .contact-form textarea {
+      resize: none;
+      height: 100px;
+    }
+    
+    .contact-form button {
+      padding: 10px 20px;
+      background-color: #1A3636;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    .contact-form button:hover {
+      background-color: #40534C;
+    }
+    
+    @media (max-width: 768px) {
+      .contact-content {
+        flex-direction: column;
+      }
+    
+      .contact-map iframe {
+        height: 250px;
+      }
+    }
+
+  /* Styling for the Book Appointment Button in the Navigation */
+  #book-appointment-btn {
+    background-color: #40534C; /* Match the button color from the form */
+    color: #1A3636; /* Text color */
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+
+  /* Container for Book Appointment Section */
+  #book-appointment {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    padding: 40px;
+    background-color: #40534C;
+    gap: 20px;
+    min-height: 100vh; /* Ensures the section takes at least full height of the viewport */
+  }
+
+  #book-appointment .container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px; /* Adds spacing between the form and the text section */
+  }
+
+  /* Styling for the Left Text Section */
+  #book-appointment .text-content {
+    flex: 1;
+  }
+
+  #book-appointment h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: #D6BD98;
+    margin-bottom: 15px;
+
+  }
+
+  #book-appointment p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  /* Appointment Form Styling */
+  form {
+    flex: 1; /* Makes the form take up equal space */
+    display: center;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch; /* Ensures all elements align properly */
+    max-width: 500px; /* Optional: Sets a maximum width for the form */
+    background-color: white; /* Optional: Adds contrast */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow */
+  }
+    
+  /* Ensure all form elements are the same width */
+  form input, form select, form textarea, form button {
+    width: 100%; /* Full width */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures proper sizing */
+  }
+
+  /* Button Styling */
+  form button {
+    background-color: #D6BD98;
+    padding: 10px 20px;
+    border: none;
+    color: #1A3636;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  form button:hover {
+    background-color: #40534C;
+    color: white;
+  }
+
+  /* Modal Style (Centering) */
+  #login-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    display: none;
+    z-index: 1000;
+  }
+
+  /* Modal Header */
+  #modal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  #modal-header h2 {
+    margin: 0;
+  }
+
+  #toggle-link {
+    color: #0066cc;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+  }
+
+  /* Form styling */
+  form input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+  }
+
+  form button {
+    padding: 10px;
+    width: 100%;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Google Login Button */
+  #google-login {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  #google-login-btn {
+    padding: 10px;
+    width: 100%;
+    background-color: #db4437;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+
+
+  /* Sign Up Section */
+  #sign-up {
+      background-color: #f9f9f9;
+      padding: 40px 0;
+      text-align: center;
+  }
+
+  #sign-up .container {
+      max-width: 600px;
+      margin: 0 auto;
+  }
+
+  #sign-up h2 {
+      font-size: 36px;
+      color: #1A3636;
+  }
+
+  #sign-up p {
+      font-size: 18px;
+      color: #677D6A;
+      margin-bottom: 30px;
+  }
+
+  /* Sign Up Form */
+  form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+  }
+
+  form label {
+      font-size: 18px;
+      color: #1A3636;
+  }
+
+  form input {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px;
+      border: 1px solid #677D6A;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #40534C;
+  }
+
+  form button {
+      background-color: #D6BD98;
+      padding: 10px 20px;
+      border: none;
+      color: #1A3636;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 20px;
+  }
+
+  form button:hover {
+      background-color: #40534C;
+      color: white;
+  }
+
+  .login-link p {
+      font-size: 16px;
+      color: #677D6A;
+  }
+
+  /* Footer Styles */
+  footer {
+      background-color: #1A3636;
+      padding: 20px 0;
+      color: white;
+      text-align: center;
+  }
+
+  footer .footer-links ul {
+      list-style-type: none;
+      padding: 0;
+  }
+
+  footer .footer-links ul li {
+      display: inline;
+      margin: 0 10px;
+  }
+
+  footer .footer-links ul li a {
+      color: white;
+      text-decoration: none;
+  }
+
+  footer .footer-links ul li a:hover {
+      text-decoration: underline;
+  }
+
+    
